@@ -9,9 +9,9 @@ from constants import OPTIONS
 #Es una función seeder porque me cansé de ingresar siempre data para poder probar.
 def seed():
   seeded_sets = {}
-  seeded_sets["A"] = {"DNI": [3, 0, 6, 1, 1, 0, 9, 2], "SET": ["0", "1", "2", "3", "6", "9"]}
-  seeded_sets["B"] = {"DNI": [9, 4, 9, 6, 6, 9, 5, 5], "SET": ["4", "5", "6", "9"]}
-  seeded_sets["C"] = {"DNI": [1, 1, 6, 7, 7, 8, 6, 7], "SET": ["1","6","7","8"]}
+  seeded_sets["A"] = {"DNI": [3, 1, 9, 1, 1, 0, 2, 6], "SET": ["0", "1", "2", "3", "6", "9"]}
+  seeded_sets["B"] = {"DNI": [9, 5, 9, 5, 5, 9, 6, 6], "SET": ["4", "5", "6", "9"]}
+  seeded_sets["C"] = {"DNI": [1, 1, 7, 8, 7, 7, 8, 7], "SET": ["1","6","7","8"]}
   return seeded_sets
 
 #Esta función se encarga de devolver los elementos únicos de un array.

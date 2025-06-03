@@ -53,14 +53,14 @@ while option == None or OPTIONS[option]["key"] != 0:
       error("Debes seleccionar dos conjuntos existentes para realizar esta operación\nSi necesitas ver los conjuntos disponibles usa la opción ver conjuntos (VC)")
 
   elif OPTIONS[option]["key"] == 7:
-    set1 = upper_input("Introduce el primer conjunto con el DNI para el cual quieres realizar la sumatoria de sus dígitos: ")
+    set1 = upper_input("Introduce el conjunto con el DNI para el cual quieres realizar la sumatoria de sus dígitos: ")
     if set1 in sets:
       digits_addition(set1, sets[set1])
     else:
       error("Debes seleccionar un conjunto existentes para realizar esta operación\nSi necesitas ver los conjuntos disponibles usa la opción ver conjuntos (VC)")
 
   elif OPTIONS[option]["key"] == 8:
-    set1 = upper_input("Introduce el primer conjunto con el DNI para el cual quieres realizar el análisis de sus dígitos: ")
+    set1 = upper_input("Introduce el conjunto con el DNI para el cual quieres realizar el análisis de sus dígitos: ")
     if set1 in sets:
       digits_count(set1, sets[set1])
     else:
