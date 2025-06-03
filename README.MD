@@ -8,7 +8,7 @@
 
 ## Descripción
 Este repositorio contiene los archivos necesarios para utilizar una aplicación que satisface la sección A de la segunda parte del trabajo práctico integrador.
-La aplicación permite:
+#### La aplicación permite:
 * Creación de conjuntos utilizando como elelemntos del mismo los valores de un DNI
 * Viasualizar el total de conjuntos cargados en la memoria
 * Eliminar un conjunto de la lista
