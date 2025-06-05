@@ -16,8 +16,7 @@ def seed():
   seeded_sets["C"] = {"DNI": [1, 1, 6, 7, 7, 8, 6, 7], "SET": ["1","6","7","8"]}
   seeded_sets["D"] = {"AÑO": [2, 0, 1, 7], "SET": ["0", "1", "2", "7"]}
   seeded_sets["E"] = {"AÑO": [1, 9, 9, 5], "SET": ["1","5","9"]}
-  seeded_sets["F"] = {"AÑO": [1, 9, 9, 5], "SET": ["1","5","9"]}
-  seeded_sets["G"] = {"AÑO": [2, 0, 2, 4], "SET": ["0","2","4"]}
+  seeded_sets["F"] = {"AÑO": [2, 0, 2, 4], "SET": ["0","2","4"]}
   return seeded_sets
 
 #Esta función se encarga de devolver los elementos únicos de un array.
