@@ -1,6 +1,6 @@
 from colorama import Fore, Back, Style
 
-from utils import sorted_unique_elements, join_and_sort, build_dni, clear_console, separator, show_sets
+from utils import analyze_birth_years, cartesian_product_age_year, count_even_odd_years, sorted_unique_elements, join_and_sort, build_num, clear_console, separator, show_sets
 
 def union(set1_key, set1, set2_key, set2, print_answ = True):
   union = sorted_unique_elements(set1["SET"] + set2["SET"])
@@ -8,7 +8,7 @@ def union(set1_key, set1, set2_key, set2, print_answ = True):
     clear_console()
     separator()
     print()
-    print(Back.LIGHTGREEN_EX + f"La union de {set1_key}={{{join_and_sort(set1["SET"])}}} con {set2_key}={{{join_and_sort(set2["SET"])}}} es: {{{join_and_sort(union)}}}" + Style.RESET_ALL)
+    print(Back.LIGHTGREEN_EX + f"La union de {set1_key}={{{join_and_sort(set1['SET'])}}} con {set2_key}={{{join_and_sort(set2['SET'])}}} es: {{{join_and_sort(union)}}}" + Style.RESET_ALL)
     print()
   else:
     return union
@@ -28,7 +28,7 @@ def intersection(set1_key, set1, set2_key, set2, print_answ = True):
     clear_console()
     separator()
     print()
-    print(Back.LIGHTGREEN_EX + f"La intersección de {set1_key}={{{join_and_sort(set1["SET"])}}} con {set2_key}={{{join_and_sort(set2["SET"])}}} es: {{{join_and_sort(intersection)}}}" + Style.RESET_ALL)
+    print(Back.LIGHTGREEN_EX + f"La intersección de {set1_key}={{{join_and_sort(set1['SET'])}}} con {set2_key}={{{join_and_sort(set2['SET'])}}} es: {{{join_and_sort(intersection)}}}" + Style.RESET_ALL)
     print()
   else:
     return intersection
@@ -42,7 +42,7 @@ def difference(set1_key, set1, set2_key, set2, print_answ = True):
     clear_console()
     separator()
     print()
-    print(Back.LIGHTGREEN_EX + f"La diferencia de {set1_key}={{{join_and_sort(set1["SET"])}}} con {set2_key}={{{join_and_sort(set2["SET"])}}} es: {{{join_and_sort(diff)}}}" + Style.RESET_ALL)
+    print(Back.LIGHTGREEN_EX + f"La diferencia de {set1_key}={{{join_and_sort(set1['SET'])}}} con {set2_key}={{{join_and_sort(set2['SET'])}}} es: {{{join_and_sort(diff)}}}" + Style.RESET_ALL)
     print()
   else:
     return diff
@@ -56,7 +56,7 @@ def sis_difference(set1_key, set1, set2_key, set2, print_answ = True):
     clear_console()
     separator()
     print()
-    print(Back.LIGHTGREEN_EX + f"La diferencia simétrica de {set1_key}={{{join_and_sort(set1["SET"])}}} con {set2_key}={{{join_and_sort(set2["SET"])}}} es: {{{join_and_sort(sis_difference)}}}" + Style.RESET_ALL)
+    print(Back.LIGHTGREEN_EX + f"La diferencia simétrica de {set1_key}={{{join_and_sort(set1['SET'])}}} con {set2_key}={{{join_and_sort(set2['SET'])}}} es: {{{join_and_sort(sis_difference)}}}" + Style.RESET_ALL)
     print()
   else:
     return sis_difference
@@ -69,7 +69,7 @@ def digits_addition(set_key, set, print_answ = True):
     clear_console()
     separator()
     print()
-    print(Back.LIGHTGREEN_EX + f"La suma de los dígitos de {set_key} => {build_dni(set["DNI"])} es: {sum_d}" + Style.RESET_ALL)
+    print(Back.LIGHTGREEN_EX + f"La suma de los dígitos de {set_key} => {build_num(set['DNI'])} es: {sum_d}" + Style.RESET_ALL)
     print()
   else:
     return sum_d
@@ -86,10 +86,10 @@ def digits_count(set_key, set):
   clear_console()
   separator()
   print()
-  print(Back.LIGHTGREEN_EX + f"La frecuendia de los dígitos de {set_key} => {build_dni(set["DNI"])} es:" + Style.RESET_ALL)
+  print(Back.LIGHTGREEN_EX + f"La frecuendia de los dígitos de {set_key} => {build_num(set['DNI'])} es:" + Style.RESET_ALL)
   print()
   for digit in digits:
-    print(Fore.LIGHTGREEN_EX + f"* El {digit} se repite {f"{digits[digit]} veces" if digits[digit] > 1 else f"{digits[digit]} vez"}" + Style.RESET_ALL)
+    print(Fore.LIGHTGREEN_EX + f'* El {digit} se repite {f"{digits[digit]} veces" if digits[digit] > 1 else f"{digits[digit]} vez"}' + Style.RESET_ALL)
   print()
 
 def digits_analize(actual_sets):
@@ -101,7 +101,7 @@ def digits_analize(actual_sets):
   for element in actual_sets:
     all_digits += actual_sets[element]["SET"]
     if len(actual_sets[element]["SET"]) > 6:
-      print(Back.LIGHTYELLOW_EX + f"El conjunto {element} = {{{join_and_sort(actual_sets[element]["SET"])}}} tiene una diversidad numérica alta!" + Style.RESET_ALL)
+      print(Back.LIGHTYELLOW_EX + f"El conjunto {element} = {{{join_and_sort(actual_sets[element]['SET'])}}} tiene una diversidad numérica alta!" + Style.RESET_ALL)
       print()
   uniq_digits = list(set(all_digits))
   uniq_digits.sort()
@@ -121,3 +121,35 @@ def delete_set(set_key, actual_sets):
   print(Back.LIGHTRED_EX + Fore.RED + f"El conjunto fue eliminado exitosamente!" + Style.RESET_ALL)
   print()
   show_sets(actual_sets, False)
+
+def count_years(sets):
+  clear_console()
+  separator()
+  print()
+  count_even_odd_years(sets)
+  print()
+
+def verify_births(sets, key):
+  clear_console()
+  separator()
+  print()
+  analyze_birth_years(sets, key)
+  print()
+
+def verify_cartesian_product(sets):
+  new_set = input("Por favor, ingresa el nómbre del conjunto en mayúscula, que deseas verificar: ")
+  clear_console()
+  separator()
+  print()
+  new_set = new_set.upper()
+  if new_set in sets:
+    if "AÑO" in sets[new_set]: 
+      cartesian_product_age_year(sets, new_set)
+    else:
+      print(Fore.YELLOW + f"- El conjunto '{new_set}' no existe en la base de AÑOS DE NACIMIENTO." + Style.RESET_ALL)
+      print(Fore.YELLOW + "- Utilizá el comando (VC) para visualizar los conjuntos cargados en el sistema." + Style.RESET_ALL)
+  else:
+    print(Fore.YELLOW + f"- El conjunto '{new_set}' no existe en la base de AÑOS DE NACIMIENTO." + Style.RESET_ALL)
+    print(Fore.YELLOW + "- Utilizá el comando (VC) para visualizar los conjuntos cargados en el sistema." + Style.RESET_ALL)
+  print()
+
