@@ -1,8 +1,14 @@
 OPTIONS = {
-  "IC": {
+  "ID": {
     "key":1,
-    "display_name": "ingresar un nuevo conjunto",
-    "description": "ingresar un nuevo conjunto",
+    "display_name": "ingresar un nuevo conjunto para el DNI",
+    "description": "ingresar un nuevo conjunto para el DNI",
+    "sets_required": 0
+  },
+  "IA": {
+    "key":11,
+    "display_name": "ingresar un nuevo conjunto para el año de nacimiento",
+    "description": "ingresar un nuevo conjunto para el año de nacimiento",
     "sets_required": 0
   },
   "VC": {
@@ -58,6 +64,30 @@ OPTIONS = {
     "display_name": "análisis lógico",
     "description": "hacer un análisis lógico de los numeros de los DNI que se encuentran cargados",
     "sets_required": 1
+  },
+  "CA": {
+    "key":12,
+    "display_name": "contar años pares e impares",
+    "description": "contar cuántos nacieron en años pares e impares",
+    "sets_required": 0
+  },
+  "VN": {
+    "key":13,
+    "display_name": "nacimientos después del 2000.",
+    "description": "realiza la verificación del año de nacimiento en los conjuntos",
+    "sets_required": 0
+  },
+  "VB": {
+    "key":14,
+    "display_name": "analizar año bisiesto",
+    "description": "realiza la verificación del año bisiesto en alguno de los conjuntos",
+    "sets_required": 0
+  },
+  "PC": {
+    "key":15,
+    "display_name": "producto cartesiano",
+    "description": "realizar el calculo del producto cartesiano entre conjunto de años y conjunto de edades",
+    "sets_required": 0
   },
   "SP": {
     "key":0,
