@@ -21,7 +21,7 @@ OPTIONS = {
     "key":10,
     "display_name": "eliminar un conjunto",
     "description": "eliminar un conjunto",
-    "sets_required": 0
+    "sets_required": 1
   },
   "UN": {
     "key": 3,
@@ -87,7 +87,7 @@ OPTIONS = {
     "key":15,
     "display_name": "producto cartesiano",
     "description": "realizar el calculo del producto cartesiano entre conjunto de años y conjunto de edades",
-    "sets_required": 0
+    "sets_required": 1
   },
   "SP": {
     "key":0,
