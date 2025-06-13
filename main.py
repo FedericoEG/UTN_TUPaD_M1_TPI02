@@ -1,6 +1,6 @@
-from main_functions import count_years, union, intersection, difference, sis_difference, digits_addition,digits_count, digits_analize, delete_set, verify_births, verify_cartesian_product
+from main_functions import count_years, union, intersection, difference, sis_difference, digits_addition,digits_count, digits_analize, delete_set, verify_births, verify_cartesian_product, insert_set
 
-from utils import show_welcome, options_menu, insert_set, show_sets, error, upper_input,check_sets, seed
+from utils import show_welcome, options_menu, show_sets, error, check_sets, seed
 
 from constants import OPTIONS
 
