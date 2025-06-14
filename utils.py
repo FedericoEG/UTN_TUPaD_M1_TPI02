@@ -17,7 +17,7 @@ def check_sets(sets, required_sets):
   selected = list(required_sets * "_")
   abort = False
   clear_console()
-  print(Fore.YELLOW + f"Debes seleccionar {f"{required_sets} conjuntos existentes" if required_sets > 1 else f"{required_sets} conjunto existente"} para realizar esta operación")
+  print(Fore.YELLOW + f"Debes seleccionar {f'{required_sets} conjuntos existentes' if required_sets > 1 else f'{required_sets} conjunto existente'} para realizar esta operación")
   print()
   print("Puedes volver al menu principal no ingresando nada." + Fore.RESET)
   print()
