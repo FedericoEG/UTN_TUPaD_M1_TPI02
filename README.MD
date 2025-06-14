@@ -10,7 +10,10 @@
 ## Descripción
 Este repositorio contiene los archivos necesarios para utilizar una aplicación que satisface las secciones A y B de la parte 2  del trabajo práctico integrador.
 Lo relacionado a la parte 1, se puede encontrar en un archivo de este mismo repositorio en formato PDF llamado `MTM - TP INTEGRADOR [Conjuntos y Logica].pdf`.
-La parte 3 es el video de presentación del proyecto que lo pueden ver [acá]( https://www.example.com).
+La parte 3 es el video de presentación del proyecto que lo pueden ver [acá](https://www.youtube.com/watch?v=AH3lsngIwcw).
+
+[![Alt text](https://img.youtube.com/vi/AH3lsngIwcw/0.jpg)](https://www.youtube.com/watch?v=AH3lsngIwcw)
+
 #### La aplicación permite:
 Dar de alta conjuntos utilizando como fuente un DNI o un año. Una vez creados los conjuntos la aplicación despliega un menú del cual se pueden elegir diversas opciones para realizar operaciones con los conjuntos que se encuentran en memoria.
 
