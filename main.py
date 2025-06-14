@@ -1,15 +1,14 @@
 from main_functions import count_years, union, intersection, difference, sis_difference, digits_addition,digits_count, digits_analize, delete_set, verify_births, verify_cartesian_product, insert_set
 
-from utils import show_welcome, options_menu, show_sets, error, check_sets, seed
+from utils import show_welcome, options_menu, show_sets, error, check_sets, optional_seeder
 
 from constants import OPTIONS
 
-#Inicial values required
-sets = seed()
+show_welcome()
+
+sets = optional_seeder({}) or {}
 number_of_sets = len(list(sets.keys()))
 option = None
-
-show_welcome()
 
 while option == None or OPTIONS[option]["key"] != 0:
   option = options_menu(number_of_sets)

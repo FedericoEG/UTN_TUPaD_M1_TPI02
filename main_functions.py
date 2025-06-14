@@ -2,7 +2,7 @@ from colorama import Fore, Back, Style
 from itertools import product
 from datetime import datetime
 
-from utils import is_leap_year, num_to_array, sorted_unique_elements, join_and_sort, build_num, clear_console, separator, show_sets, upper_input
+from utils import is_leap_year, num_to_array, sorted_unique_elements, join_and_sort, build_num, clear_console, separator, show_sets, normalize_input
 
 def union(set1_key, set1, set2_key, set2, print_answ = True):
   union = sorted_unique_elements(set1["SET"] + set2["SET"])
@@ -163,11 +163,11 @@ def insert_set(actual_sets, number_of_sets, key):
     key_name = "AÑO DE NACIMIENTO"
   separator()
   overrite = "no"
-  set_name = upper_input("Ingrese el nombre deseado para su conjunto. Se recomienda utilizar una letra MAYUSCULA: ")
+  set_name = normalize_input("Ingrese el nombre deseado para su conjunto. Se recomienda utilizar una letra MAYUSCULA: ")
   while set_name in list(actual_sets.keys()) and overrite == "no":
-    overrite = input(Back.LIGHTYELLOW_EX + "El nombre seleccionado ya está en uso. Desea sobreescribir el conjunto? (si/no): " + Style.RESET_ALL)
+    overrite = normalize_input(Back.LIGHTYELLOW_EX + "El nombre seleccionado ya está en uso. Desea sobreescribir el conjunto? (si/no): " + Style.RESET_ALL, 'lower')
     if overrite == "no":
-      set_name = input("Ingrese el nombre deseado para su conjunto. Se recomienda utilizar una letra MAYUSCULA: ")
+      set_name = normalize_input("Ingrese el nombre deseado para su conjunto. Se recomienda utilizar una letra MAYUSCULA: ")
     else:
       overrite = "si"
   set_values = input(f"Ingrese su número de {key_name} sin carácteres de por medio para ser convertido en los valores del conjunto: ")
